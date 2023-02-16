@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Room</title>
+</head>
+<body>
+<h1>Room</h1>
+<div>
+  <table>
+    <thead>
+    <tr>
+      <th>Nr</th>
+      <th>Comment</th>
+      <th>Time</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="message : ${messages}">
+      <td th:text="${message.number}"></td>
+      <td th:text="${message.comment}"></td>
+      <td th:text="${message.timeStamp}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <form action="/room" method="post">
+    <textarea name="comment" rows="10" cols="30">
+    </textarea>
+    <br>
+    <button>Send</button>
+  </form>
+</div>
+</body>
+</html>
