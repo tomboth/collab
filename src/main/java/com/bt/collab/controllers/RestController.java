@@ -2,6 +2,8 @@ package com.bt.collab.controllers;
 
 import com.bt.collab.models.User;
 import com.bt.collab.services.UserService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -13,5 +15,8 @@ public class RestController {
         this.userService = userService;
     }
 
-
+//    @GetMapping("/users")
+//    public ResponseEntity<?> getUsers (){
+//        userService.getUsers();
+//    }
 }

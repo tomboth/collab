@@ -28,4 +28,8 @@ public class UserService {
     public Iterable<Message> findMessages() {
         return messageRepo.findAll();
     }
+
+    public Iterable<String> getUsers() {
+        return userRepo.findAllUsers();
+    }
 }

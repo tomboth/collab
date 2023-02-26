@@ -11,6 +11,7 @@
     <thead>
     <tr>
       <th>Nr</th>
+      <th>User</th>
       <th>Comment</th>
       <th>Time</th>
     </tr>
@@ -18,6 +19,7 @@
     <tbody>
     <tr th:each="message : ${messages}">
       <td th:text="${message.number}"></td>
+      <td th:text="${message.user}"></td>
       <td th:text="${message.comment}"></td>
       <td th:text="${message.timeStamp}"></td>
     </tr>
@@ -26,6 +28,8 @@
 </div>
 <div>
   <form action="/room" method="post">
+    <label for="user">User</label>
+    <input id="user" name="user" type="text"><br>
     <textarea name="comment" rows="10" cols="30">
     </textarea>
     <br>
